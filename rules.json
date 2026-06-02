@@ -1,0 +1,5 @@
+{
+  "requireActiveAccount": true,
+  "requireKYC": true,
+  "maxAmount": 100000
+}
