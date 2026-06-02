@@ -249,27 +249,6 @@ Source A (JSON transaction) and Source B (CSV registry) ingestion forms, with th
 ![Ingestion Hub](image-15.png)
 ---
 
-### 6. Certificate Viewer — SHA-256 Integrity Verified
-The full JSON Decision Certificate with the `certificateHash` field visible. Clicking "Verify Integrity Certificate" recomputes the hash server-side and confirms it matches.
-
-![Certificate Verified](screenshots/07-certificate-verified.png)
-
----
-
-### 7. Insufficient Data — Missing Registry Record (TX005)
-ACC099 has no entry in the account registry. The system returns `insufficient_data` and skips rule evaluation entirely.
-
-![Insufficient Data](screenshots/08-insufficient-data-tx005.png)
-
----
-
-### 8. Event Ingestion Hub
-The ingestion forms for Source A (JSON transaction) and Source B (CSV registry row), with the active registry payload and its SHA-256 hash visible at the bottom.
-
-![Ingestion Hub](screenshots/09-ingestion-hub.png)
-
----
-
 ## Engineering Trade-offs
 
 **In-memory storage instead of a database.** All state lives in server-side arrays. This eliminates setup friction for a prototype and keeps the focus on the decision layer. The trade-off is that state is lost on server restart. A production version would use Postgres with indexed lookups on `transactionId`.
