@@ -189,7 +189,7 @@ Edit `rules.json` — the server reads it fresh on every evaluation request, so 
 ### 1. Event Queue — Ingestion Layer with Duplicate Detection
 TX001 appears twice, both automatically flagged before any evaluation runs.
 
-![Event Queue](<img width="473" height="740" alt="image" src="https://github.com/user-attachments/assets/b32b01c8-9bd2-4943-9079-1e73ee053f5a" />)
+![Event Queue](image.png)
 
 ---
 
